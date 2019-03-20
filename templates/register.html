@@ -1,0 +1,51 @@
+
+    <html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <link rel="stylesheet" href="../css/register.css" type="text/css">
+        <title>Register Now</title>
+    </head>
+
+    <body>
+        <form method="POST" name="form" novalidate>
+            <div class="Registration">
+                <h1>sign up</h1>
+                <div class="textfield">
+                    <label for="username"><b>username</b></label>
+                    <input type="text" style="text-align:left" ng-model="username" placeholder="enter username" name="username"
+                        required>
+                    <span style="color:red" ng-show="form.username.$touched || form.username.$dirty && form.username.$invalid">username
+                        is required</span>
+                        
+                </div>
+                <div class="textfield">
+                    <label for="email"><b>email</b></label>
+                    <input type="text" style="text-align:left" ng-model="email" placeholder="enter email" name="email"
+                        required>
+                    <span style="color:red" ng-show="form.email.$dirty && form.email.$invalid ">invalid email address</span>
+                    <span ng-show="form.email.$error"></span>
+                </div>
+                <div class="textfield">
+                    <label for="password"><b>password</b></label>
+                    <input type="password" style="text-align:left" ng-model="password" placeholder="enter password"
+                        name="password" required>
+                    <!-- <span style="color:red" ng-show="form.password.$dirty && form.password.$invalid ">invalid password</span> -->
+                </div>
+                <div class="textfield">
+                    <label for="confirmepassword"><b>confirme password</b></label>
+                    <input type="password" ng-model="confirmepassword" placeholder="confirmepassword" name="confirme password"
+                        required>
+                    <!-- <span style="color:red" ng-show="form.confirme password.$dirty && form.confirme password.$invalid"></span>
+                    <span ng-show="form.confirmepassword.$error">no matched password</span> -->
+                </div>
+                <div class="btnfield"></div>
+
+                <button type="button" class="cancelbtn" ui-sref="login">Sign-in</button>
+                <button type="submit" class="signup" ng-click="register()">Submit</button>
+            </div>
+            </div>
+        </form>
+    </body>
+
+    </html>

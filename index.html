@@ -1,0 +1,38 @@
+
+    <html>
+
+    <head>
+        <!-- <link rel="stylesheet" href='../client/css/login.css' type="text/css">  -->
+        <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-socket-io/0.7.0/socket.min.js"></script>
+
+        <script src="./app.js"></script>
+        <script src="./controllers/loginController.js"></script>
+        <script src="./services/loginServices.js"></script>
+
+        <script src="./controllers/registerController.js"></script>
+        <script src="./services/registerServices.js"></script>
+
+        <script src="./controllers/forgetPasswordController.js"></script>
+        <script src="./services/forgetPasswordServices.js"></script>
+
+        <script src="./services/resetPasswordServices.js"></script>
+        <script src="./controllers/resetPasswordController.js"></script>
+
+        <script src="./services/chatServices.js"></script>
+        <script src="./controllers/chatController.js"></script>
+
+
+    </head>
+
+    <body ng-app="chatApp">
+        <ui-view>
+
+        </ui-view>
+
+    </body>
+
+    </html>

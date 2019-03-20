@@ -1,0 +1,37 @@
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/login.css" type="text/css">
+
+    <title>chat-App Login</title>
+</head>
+
+<body>
+    <div class="Login"></div>
+    <h2>Login page</h2>
+    <form name="form" class="form" novalidate>
+        <div class="Login">
+            <label for="email"><b>Email</b></label>
+            <input type="email" class="from-control" style="text-align: left" name="email" ng-model="email" placeholder="email-id" required required pattern=[A-Z]*[a-z]*[0-9]*gmail.com><br>
+            <span style="color:red" ng-show="form.email.$dirty && form.email.$invalid ">invalid email address</span><br> 
+           
+            <label for="password"><b>PassWord</b></label>
+            <input type="password" class="from-control" name="password" ng-model="password" style="text-align:left" placeholder="password" required>
+            <span style="color:red" ng-show="form.password.$dirty && form.password.$invalid ">invalid password</span><br> 
+           
+           
+            <label class="login signup">
+                <a ui-sref="forgetPassword"><b>Forget password</b></a>
+            </label>
+            <p class="login-signup">
+                <a ui-sref="register"><b>SignUp</b></a>
+            </p>
+            <button type="submit" ng-click="login()" class="submitbtn" >login</button>
+        </div>
+    </form>
+    </div>
+</body>
+
+</html>
+

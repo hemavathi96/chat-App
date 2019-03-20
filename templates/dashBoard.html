@@ -1,0 +1,49 @@
+<head>
+        <link rel="stylesheet" href="../css/dashBoard.css" type="text/css" />
+    </head>
+
+    <body ng-controller="chatController">
+        <header>
+            <h2> welcome to Chatapp</h2>
+            <span class="user">{{currUserName}}</span>
+           <p class="user">
+                <a ui-sref="login"><b>SignOut</b></a>
+            </p>
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <p>Contacts List</p>
+                </ul>
+                <p ng-repeat="x in allUser" ng-click="person(x)" ng-show="currUserName!=x.username">
+                    {{x.username}}</p>
+            </nav>
+            <article>
+                <div class="groupChat">
+                    <p class="username">{{recieverUserName}}</p>
+                </div>
+                <section>
+                    <form>
+                        <div class="chatLogs" ng-repeat="chat in allUserArr">
+                            <div class="chat friend" ng-show="currUser != chat.senderUserId">
+                                <p class="chatMsg"> {{chat.message}}</p>
+                            </div>
+                            <div class="chat self" ng-show="currUser == chat.senderUserId">
+                                <!-- <div class="user-photo"> <img src=""></div> -->
+                                <p class="chatMsg"> {{chat.message}}</p>
+                            </div>
+                        </div>
+                </section>
+                <div>
+                    <textarea ng-model="message" ng-keyup="$event.keyCode == 13  &amp;&amp; sendMessage()" class="text"
+                        placeholder="write Message here........"></textarea>
+                    <button type="button" ng-click="sendMessage()" class="sendbtn">Send</button>
+                </div>
+                </form>
+            </article>
+
+        </section>
+    </body>
+
+    </html>
